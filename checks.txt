@@ -1,0 +1,11 @@
+=== GET / ===
+{"greeting": "Hello from WSL", "count": 2, "hostname": "5e26151b6ca5", "storage": "sqlite"}
+=== POST x2 ===
+{"greeting": "Hello from WSL", "count": 3, "hostname": "5e26151b6ca5", "storage": "sqlite"}
+{"greeting": "Hello from WSL", "count": 4, "hostname": "5e26151b6ca5", "storage": "sqlite"}
+=== GET / after ===
+{"greeting": "Hello from WSL", "count": 4, "hostname": "5e26151b6ca5", "storage": "sqlite"}
+=== healthz ===
+HTTP/1.0 200 OK
+=== readyz ===
+HTTP/1.0 200 OK
