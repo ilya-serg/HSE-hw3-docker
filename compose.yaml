@@ -1,0 +1,13 @@
+services:
+  app:
+    build: .
+    ports:
+      - "${PORT}:8000"
+    environment:
+      - GREETING=${GREETING}
+      - DB_PATH=/data/counter.db
+    volumes:
+      - app_data:/data
+
+volumes:
+  app_data:

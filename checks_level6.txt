@@ -1,0 +1,4 @@
+{"greeting": "Hello from Env File", "count": 1, "hostname": "4561ff4a27d8", "storage": "sqlite"}
+{"greeting": "Hello from Env File", "count": 2, "hostname": "4561ff4a27d8", "storage": "sqlite"}
+{"greeting": "Hello from Env File", "count": 3, "hostname": "4561ff4a27d8", "storage": "sqlite"}
+{"greeting": "Hello from Env File", "count": 3, "hostname": "50e841ea9cab", "storage": "sqlite"}
