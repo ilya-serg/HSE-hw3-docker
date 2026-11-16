@@ -2,12 +2,29 @@ services:
   app:
     build: .
     ports:
-      - "${PORT}:8000"
+      - "8080:8000"
     environment:
       - GREETING=${GREETING}
-      - DB_PATH=/data/counter.db
+      - STORAGE=redis
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    command: redis-server --appendonly yes
     volumes:
-      - app_data:/data
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
 
 volumes:
-  app_data:
+  redis_data:

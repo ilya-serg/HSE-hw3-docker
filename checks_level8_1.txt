@@ -1,0 +1,1 @@
+checked: count 2 -> restart -> count 2 (storage redis)
