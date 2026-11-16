@@ -1,0 +1,187 @@
+ Image hw3_test-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 482B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 257B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 0.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 68B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#5 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 94B done
+#6 DONE 0.0s
+
+#7 [5/6] COPY app/app.py .
+#7 CACHED
+
+#8 [2/6] WORKDIR /app
+#8 CACHED
+
+#9 [3/6] COPY app/requirements.txt .
+#9 CACHED
+
+#10 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#10 CACHED
+
+#11 [6/6] RUN useradd -m -u 1000 appuser
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:ee311de9c97269d03d33ec86ea7d70f5b479215bcf65f9c046371d410321cc04 done
+#12 exporting config sha256:2e9a74097c5bf8a177c465a9e5115d03c021347791fa6dc29ce3b870a8b12317 done
+#12 exporting attestation manifest sha256:4453c1545aa554abafb10d64f920e5d7f943322b5af3b150f5648be24aadd269 0.0s done
+#12 exporting manifest list sha256:8847c75a9000094945f1852dd2eefd1c18266763936bb0b36530d15d7b1d8741 0.0s done
+#12 naming to docker.io/library/hw3_test-app:latest
+#12 naming to docker.io/library/hw3_test-app:latest done
+#12 unpacking to docker.io/library/hw3_test-app:latest 0.0s done
+#12 DONE 0.1s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ Image hw3_test-app Built 
+ Network hw3_test_default Creating 
+ Volume hw3_test_redis_data Creating 
+ Volume hw3_test_redis_data Created 
+ Network hw3_test_default Created 
+ Container hw3_test-redis-1 Creating 
+ Container hw3_test-redis-1 Created 
+ Container hw3_test-app-1 Creating 
+ Container hw3_test-app-1 Created 
+ Container hw3_test-redis-1 Starting 
+ Container hw3_test-redis-1 Started 
+ Container hw3_test-app-1 Starting 
+ Container hw3_test-app-1 Started 
+ Container hw3_test-redis-1 Running 
+ Container hw3_test-app-1 Recreate 
+ Container hw3_test-app-1 Recreated 
+ Container hw3_test-app-1 Starting 
+ Container hw3_test-app-1 Started 
+ Container hw3_test-redis-1 Stopping 
+ Container hw3_test-redis-1 Stopped 
+ Container hw3_test-redis-1 Starting 
+ Container hw3_test-redis-1 Started 
+ Container hw3_test-app-1 Stopping 
+ Container hw3_test-app-1 Stopped 
+ Container hw3_test-redis-1 Stopping 
+ Container hw3_test-redis-1 Stopped 
+ Container hw3_test-redis-1 Starting 
+ Container hw3_test-redis-1 Started 
+ok
+ Container hw3_test-app-1 Stopping 
+ Container hw3_test-app-1 Stopped 
+ Container hw3_test-app-1 Removing 
+ Container hw3_test-app-1 Removed 
+ Container hw3_test-redis-1 Stopping 
+ Container hw3_test-redis-1 Stopped 
+ Container hw3_test-redis-1 Removing 
+ Container hw3_test-redis-1 Removed 
+ Volume hw3_test_redis_data Removing 
+ Network hw3_test_default Removing 
+ Volume hw3_test_redis_data Removed 
+ Network hw3_test_default Removed 
+ Image hw3_test-app Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 482B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 257B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.13-slim
+#3 DONE 0.5s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 68B done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90
+#5 resolve docker.io/library/python:3.13-slim@sha256:e48f59cdba69a3cbd9ed2cf0f348d90d45a8d350d98134cf1070bc106ee9ed90 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 94B done
+#6 DONE 0.0s
+
+#7 [2/6] WORKDIR /app
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY app/app.py .
+#9 CACHED
+
+#10 [3/6] COPY app/requirements.txt .
+#10 CACHED
+
+#11 [6/6] RUN useradd -m -u 1000 appuser
+#11 CACHED
+
+#12 exporting to image
+#12 exporting layers done
+#12 exporting manifest sha256:ee311de9c97269d03d33ec86ea7d70f5b479215bcf65f9c046371d410321cc04 done
+#12 exporting config sha256:2e9a74097c5bf8a177c465a9e5115d03c021347791fa6dc29ce3b870a8b12317
+#12 exporting config sha256:2e9a74097c5bf8a177c465a9e5115d03c021347791fa6dc29ce3b870a8b12317 done
+#12 exporting attestation manifest sha256:8594eafd44a18a51f94b4b0eccf38db19bb9026559f5d6bfe39cf0b4ae93cbb9 0.0s done
+#12 exporting manifest list sha256:effac0ba9771d71522d0b982d968525d52edca632c02e2208d405923924826ff 0.0s done
+#12 naming to docker.io/library/hw3_test-app:latest
+#12 naming to docker.io/library/hw3_test-app:latest done
+#12 unpacking to docker.io/library/hw3_test-app:latest 0.0s done
+#12 DONE 0.1s
+
+#13 resolving provenance for metadata file
+#13 DONE 0.0s
+ Image hw3_test-app Built 
+ Network hw3_test_default Creating 
+ Volume hw3_test_redis_data Creating 
+ Volume hw3_test_redis_data Created 
+ Network hw3_test_default Created 
+ Container hw3_test-redis-1 Creating 
+ Container hw3_test-redis-1 Created 
+ Container hw3_test-app-1 Creating 
+ Container hw3_test-app-1 Created 
+ Container hw3_test-redis-1 Starting 
+ Container hw3_test-redis-1 Started 
+ Container hw3_test-app-1 Starting 
+ Container hw3_test-app-1 Started 
+ Container hw3_test-redis-1 Running 
+ Container hw3_test-app-1 Recreate 
+ Container hw3_test-app-1 Recreated 
+ Container hw3_test-app-1 Starting 
+ Container hw3_test-app-1 Started 
+ Container hw3_test-redis-1 Stopping 
+ Container hw3_test-redis-1 Stopped 
+ Container hw3_test-redis-1 Starting 
+ Container hw3_test-redis-1 Started 
+ Container hw3_test-app-1 Stopping 
+ Container hw3_test-app-1 Stopped 
+ Container hw3_test-redis-1 Stopping 
+ Container hw3_test-redis-1 Stopped 
+ Container hw3_test-redis-1 Starting 
+ Container hw3_test-redis-1 Started 
+ok
+ Container hw3_test-app-1 Stopping 
+ Container hw3_test-app-1 Stopped 
+ Container hw3_test-app-1 Removing 
+ Container hw3_test-app-1 Removed 
+ Container hw3_test-redis-1 Stopping 
+ Container hw3_test-redis-1 Stopped 
+ Container hw3_test-redis-1 Removing 
+ Container hw3_test-redis-1 Removed 
+ Volume hw3_test_redis_data Removing 
+ Network hw3_test_default Removing 
+ Volume hw3_test_redis_data Removed 
+ Network hw3_test_default Removed 

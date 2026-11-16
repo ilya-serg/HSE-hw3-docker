@@ -2,11 +2,17 @@ services:
   app:
     build: .
     ports:
-      - "8080:8000"
+      - "${PORT:-8080}:8000"
     environment:
       - GREETING=${GREETING}
       - STORAGE=redis
       - REDIS_URL=redis://redis:6379/0
+    user: "1000:1000"
+    read_only: true
+    tmpfs:
+      - /tmp
+    mem_limit: 256m
+    cpus: 1.0
     depends_on:
       - redis
     healthcheck:
